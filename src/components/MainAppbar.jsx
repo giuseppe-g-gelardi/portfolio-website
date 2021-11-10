@@ -39,6 +39,7 @@ export default function MainAppBar({ check, change }) {
           <Tab label="Home" component={Link} to='/home' />
           <Tab label="Resume" component={Link} to='/resume' />
           <Tab label="Contact" component={Link} to='/contact' />
+          <Tab label="Projects" component={Link} to='/projects' />
         </Tabs>
       </AppBar>
     </Box>

@@ -9,6 +9,7 @@ import { lightTheme, darkTheme } from './components/Theme/Theme'
 import Home from './pages/Home'
 import Resume from './pages/Resume'
 import Contact from './pages/Contact'
+import Projects from './pages/Projects'
 
 export default function App() {
 
@@ -25,6 +26,7 @@ export default function App() {
             <Route path='/home' element={<Home />} />
             <Route path='/resume' element={<Resume />} />
             <Route path='/contact' element={<Contact />} />
+            <Route path='/projects' element={<Projects />} />
           </Routes>
       </Paper>
     </ThemeProvider>
