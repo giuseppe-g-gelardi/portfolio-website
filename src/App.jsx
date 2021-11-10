@@ -5,9 +5,11 @@ import { Paper } from '@material-ui/core'
 import { CssBaseline } from '@mui/material'
 
 import MainAppBar from './components/MainAppbar'
+
 import { lightTheme, darkTheme } from './components/Theme/Theme'
 import Home from './pages/Home'
 import Resume from './pages/Resume'
+import Contact from './pages/Contact'
 
 export default function App() {
 
@@ -23,6 +25,7 @@ export default function App() {
           <Routes>
             <Route path='/home' element={<Home />} />
             <Route path='/resume' element={<Resume />} />
+            <Route path='/contact' element={<Contact />} />
           </Routes>
       </Paper>
     </ThemeProvider>
