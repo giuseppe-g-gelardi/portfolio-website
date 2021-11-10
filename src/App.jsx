@@ -1,27 +1,30 @@
+import React, { useState } from 'react'
 import { ThemeProvider } from '@material-ui/core/styles'
-import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { Paper } from '@material-ui/core'
 import { CssBaseline } from '@mui/material'
 
-import theme from './components/Theme/Theme'
-import Layout from './components/Layout'
+import MainAppBar from './components/MainAppbar'
+import { lightTheme, darkTheme } from './components/Theme/Theme'
 import Home from './pages/Home'
 import Resume from './pages/Resume'
 
 export default function App() {
+
+  const [darkMode, setDarkMode] = useState(false)
+
+  const theme = ( darkMode ? darkTheme : lightTheme)
+
   return (
-    <>
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Paper style={{height: '100vh', width: '100%'}}>
-        <Layout />
+        <MainAppBar check={darkMode} change={() => setDarkMode(!darkMode)} />
           <Routes>
-            <Route path='/' element={<Home />} />
+            <Route path='/home' element={<Home />} />
             <Route path='/resume' element={<Resume />} />
           </Routes>
       </Paper>
     </ThemeProvider>
-    </>
   )
 }
