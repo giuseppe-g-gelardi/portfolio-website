@@ -24,13 +24,14 @@ export default function MainAppBar({ check, change }) {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" elevation={10} color='inherit' background='inherit'>
+      <AppBar position="static" elevation={10} color='transparent'>
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Welcome
           </Typography>
           {/* dark mode toggle switch */}
-          <Switch onChange={change} checked={check} />{/* dark mode toggle */}
+          <Switch onChange={change} checked={check} />
+          {/* dark mode toggle */}
         </Toolbar>
         <Tabs
           value={value}
