@@ -7,12 +7,7 @@ import Switch from '@material-ui/core/Switch'
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import { Link } from 'react-router-dom'
-// import { makeStyles } from '@mui/styles';
-
-
-// const useStyles = makeStyles((theme) => {
-
-// })
+import MuiSwitch from './MuiSwitch'
 
 export default function MainAppBar({ check, change }) {
 
@@ -30,7 +25,8 @@ export default function MainAppBar({ check, change }) {
             Welcome
           </Typography>
           {/* dark mode toggle switch */}
-          <Switch onChange={change} checked={check} />
+          {/* <Switch onChange={change} checked={check} /> */}
+          <MuiSwitch onChange={change} checked={check} />
           {/* dark mode toggle */}
         </Toolbar>
         <Tabs

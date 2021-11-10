@@ -5,7 +5,6 @@ import { Paper } from '@material-ui/core'
 import { CssBaseline } from '@mui/material'
 
 import MainAppBar from './components/MainAppbar'
-
 import { lightTheme, darkTheme } from './components/Theme/Theme'
 import Home from './pages/Home'
 import Resume from './pages/Resume'
@@ -20,7 +19,7 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Paper style={{height: '100vh', width: '100%'}}>
+      <Paper style={{height: '100vh', width: '100%', borderRadius: '0'}}>
         <MainAppBar check={darkMode} change={() => setDarkMode(!darkMode)} />
           <Routes>
             <Route path='/home' element={<Home />} />
