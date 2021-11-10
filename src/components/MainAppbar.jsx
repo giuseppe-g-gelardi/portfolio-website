@@ -7,6 +7,12 @@ import Switch from '@material-ui/core/Switch'
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import { Link } from 'react-router-dom'
+// import { makeStyles } from '@mui/styles';
+
+
+// const useStyles = makeStyles((theme) => {
+
+// })
 
 export default function MainAppBar({ check, change }) {
 
@@ -18,7 +24,7 @@ export default function MainAppBar({ check, change }) {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" elevation={10} color='primary'>
+      <AppBar position="static" elevation={10} color='inherit' background='inherit'>
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Welcome

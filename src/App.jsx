@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, createContext } from 'react'
 import { ThemeProvider } from '@material-ui/core/styles'
 import { Routes, Route } from 'react-router-dom'
 import { Paper } from '@material-ui/core'
@@ -15,7 +15,7 @@ export default function App() {
 
   const [darkMode, setDarkMode] = useState(false)
 
-  const theme = ( darkMode ? darkTheme : lightTheme)
+  const theme = (darkMode ? darkTheme : lightTheme)
 
   return (
     <ThemeProvider theme={theme}>
