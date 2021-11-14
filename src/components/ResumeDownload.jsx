@@ -1,17 +1,16 @@
 import React from 'react'
-import { saveAs } from 'file-saver'
+import resume from '../resume/resume.pdf'
 
 export default function ResumeDownload() {
 
-  const savefile = () => {
-    saveAs(
-      'https://github.com/giuseppe-g-gelardi/portfolio-website/blob/main/src/resume/resume.pdf'
-    )
-  }
+  const data = resume
+
 
   return (
     <div>
-      <button onClick={savefile}>download</button>
+      <a href={data} download>
+        <button>download resume</button>
+      </a>
     </div>
   )
 }
