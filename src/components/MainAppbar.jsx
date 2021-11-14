@@ -21,7 +21,7 @@ export default function MainAppBar({ check, change }) {
       <AppBar position="static" elevation={10} color='transparent'>
         <Toolbar>
           <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
-            {'>'}_ Welcome
+            Welcome
           </Typography>
           {/* dark mode toggle switch */}
           <MuiSwitch onChange={change} checked={check} />
